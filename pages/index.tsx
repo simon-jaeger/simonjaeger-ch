@@ -1,10 +1,10 @@
 import Head from "next/head"
 import {useEffect, useState} from "react"
-import {spans} from "next/dist/build/webpack/plugins/profiling-plugin"
 import Link from "components/Link"
 import {theme} from "tailwind.config"
 import Greeting from "components/Greeting"
 import NoSSR from "components/NoSSR"
+import PhysicsGimmick from "components/PhysicsGimmick"
 
 export default function Page() {
   const [lang, setLang] = useState<Lang>("en-us")
@@ -83,7 +83,7 @@ export default function Page() {
             </> : <>
               ich bin Simon, ein Fullstack-Entwickler aus der
               Schweiz. <br className="sm:hidden"/>
-              Kontaktier mich via E-Mail <Link
+              Kontaktier mich via <Link
               text="E-Mail"
               to="mailto:simon.pascal.jaeger@gmail.com"
               color={theme.colors.green["400"]}
@@ -100,6 +100,7 @@ export default function Page() {
           </p>
         </div>
       </main>
+      <PhysicsGimmick/>
     </NoSSR>
   </>)
 }
