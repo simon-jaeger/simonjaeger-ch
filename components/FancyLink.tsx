@@ -1,8 +1,8 @@
-import NextLink from "next/link"
+import Link from "next/link"
 
-export default function Link({text, to, color}:
+export default function FancyLink({text, to, color}:
                                { text: string, to: string, color: string }) {
-  return <NextLink href={to}>
+  return <Link href={to}>
     <a
       target="_blank"
       className="inline-block relative px-[2px] font-semibold [--overlay:0%] enter:[--overlay:100%]"
@@ -20,5 +20,5 @@ export default function Link({text, to, color}:
         }}
       ></span>
     </a>
-  </NextLink>
+  </Link>
 }

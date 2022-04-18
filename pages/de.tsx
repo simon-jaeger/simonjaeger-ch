@@ -1,28 +1,24 @@
-import {useRouter} from "next/router"
-import {useEffect} from "react"
 import Head from "next/head"
 import FancyLink from "components/FancyLink"
 import {theme} from "tailwind.config"
+import {useEffect} from "react"
 
 export default function Page() {
-  const router = useRouter()
   useEffect(() => {
-    document.documentElement.lang = 'en-us'
-    if (window.navigator.language.toLowerCase().startsWith("de"))
-      router.replace("/de/")
-  }, [router])
+    document.documentElement.lang = "de-ch"
+  }, [])
 
   return (<>
     <Head>
-      <title>Simon Jaeger</title>
+      <title>Simon Jäger</title>
       <meta
         name="description"
-        content="Web and app developer from Switzerland"
+        content="Web- und App-Entwickler aus derSchweiz"
       />
-      <meta property="og:title" content="Simon Jaeger"/>
+      <meta property="og:title" content="Simon Jäger"/>
       <meta
         property="og:description"
-        content="Web and app developer from Switzerland"
+        content="Web- und App-Entwickler aus derSchweiz"
       />
       <meta property="og:image" content="/og-banner.png"/>
       <link rel="icon" href="/favicon.png"/>
@@ -32,23 +28,23 @@ export default function Page() {
     <main className="px-20 sm:px-6 mt-[20vh] sm:mt-10">
       <div className="lg:[zoom:1.25] mx-auto  max-w-6xl">
         <h1 className="mb-5 text-7xl font-bold uppercase sm:mb-3 sm:text-5xl">
-          Simon Jaeger
+          Simon Jäger
         </h1>
         <h2 className="mb-10 text-xl font-bold uppercase sm:mb-4">
-          Web and app developer
+          Web- und App-Entwickler
         </h2>
         <p className="text-xl sm:leading-relaxed">
-          Hello, I’m Simon, a full stack developer from
-          Switzerland. <br className="sm:hidden"/>
-          Get in touch via <FancyLink
-          text="email"
+          Hallo, ich bin Simon, ein Fullstack-Entwickler aus der
+          Schweiz. <br className="sm:hidden"/>
+          Kontaktier mich via <FancyLink
+          text="E-Mail"
           to="mailto:simon.pascal.jaeger@gmail.com"
           color={theme.colors.green["400"]}
-        />, check out my projects on <FancyLink
+        />, sieh dir meine Projekte auf <FancyLink
           text="GitHub"
           to="https://github.com/simon-jaeger"
           color={theme.colors.blue["400"]}
-        /> or follow my blog on <FancyLink
+        /> an oder folge meinem Blog auf <FancyLink
           text="Hashnode"
           to="https://blog.simonjaeger.ch"
           color={theme.colors.red["400"]}
@@ -58,4 +54,3 @@ export default function Page() {
     </main>
   </>)
 }
-
