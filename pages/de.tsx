@@ -34,7 +34,7 @@ export default function Page() {
           Web- und App-Entwickler
         </h2>
         <p className="text-xl sm:leading-relaxed">
-          Hallo, ich bin Simon, ein Fullstack-Entwickler aus der
+          Hallo, ich bin Simon, ein Full Stack Developer aus der
           Schweiz. <br className="sm:hidden"/>
           Kontaktier mich via <FancyLink
           text="E-Mail"
